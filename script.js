@@ -1,0 +1,92 @@
+const items = [
+    {
+        id: 1,
+        name: "Fusée Banane",
+        description: "Parfait pour une fringale intergalactique. Attention aux singes cosmiques.",
+        price: 42.9,
+    },
+    {
+        id: 2,
+        name: "Chaussettes Invisibles",
+        description: "Enfin une excuse valable pour la chaussette disparue dans la sécheuse.",
+        price: 7.5,
+    },
+    {
+        id: 3,
+        name: "Café Quantique",
+        description: "À la fois chaud et froid, il te réveille et t’endort en même temps.",
+        price: 199.9,
+    },
+    {
+        id: 4,
+        name: "Armée de Canards en Caoutchouc",
+        description: "Prête à envahir ta baignoire et conquérir la salle de bain.",
+        price: 12.4,
+    },
+    {
+        id: 5,
+        name: "Ordinateur Portable en Fromage",
+        description: "Puissant, mais attention aux souris hackeuses.",
+        price: 899.95,
+    },
+    {
+        id: 6,
+        name: "Stylo Téléporteur",
+        description: "Tes notes de cours se retrouvent directement… dans un autre univers.",
+        price: 3.3,
+    },
+    {
+        id: 7,
+        name: "Pizza Auto-Cuisante",
+        description: "Se prépare toute seule, mais mange parfois tes devoirs en entrée.",
+        price: 14.9,
+    },
+    {
+        id: 8,
+        name: "Écouteurs Cactus",
+        description: "Qualité sonore piquante, déconseillés aux oreilles sensibles.",
+        price: 59.99,
+    },
+    {
+        id: 9,
+        name: "Mini-Dragon de Compagnie",
+        description: "Idéal pour réchauffer ton appart, moins pour tes rideaux.",
+        price: 350,
+    },
+    {
+        id: 10,
+        name: "Sandwich Fluorescent",
+        description: "Brille dans le noir, parfait pour un pique-nique post-apocalyptique.",
+        price: 5.2,
+    },
+    {
+        id: 11,
+        name: "Réveil Voyageur Temporel",
+        description: "Te réveille hier, aujourd’hui ou demain. Résultats non garantis.",
+        price: 75.0,
+    },
+    {
+        id: 12,
+        name: "Chaise Flottante",
+        description: "Confort absolu, mais risque de dériver au milieu de la pièce.",
+        price: 42,
+    },
+    {
+        id: 13,
+        name: "Chargeur universel",
+        description: "Compatible avec tout, sauf ton propre téléphone.",
+        price: 22.2,
+    },
+    {
+        id: 14,
+        name: "Clé USB Banane",
+        description: "Stocke des données… et du potassium.",
+        price: 16.9,
+    },
+    {
+        id: 15,
+        name: "Poisson Rouge Robot",
+        description: "Ne meurt jamais, mais réclame des mises à jour logicielles quotidiennes.",
+        price: 199.95,
+    },
+];

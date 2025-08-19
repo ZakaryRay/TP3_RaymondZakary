@@ -13,7 +13,7 @@
             content="Notre super boutique en ligne vous offres une mutlitude de produit complètement aléatoire!" />
     </head>
     <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white">
-        <nav class="grid grid-cols-12 text-xl">
+        <nav class="grid grid-cols-12 text-xl bg-none md:dark:bg-blue-950">
             <h1 class="col-span-4">
                 <a href="index.html"
                     ><img
@@ -26,18 +26,26 @@
                 <li class="mx-2 hover:underline font-bold"><a href="index.html">Accueil</a></li>
                 <li class="mx-2 hover:underline"><a href="panier.html">Mon panier</a></li>
             </ul>
+            <div class="hidden p-5 col-span-4 col-end-13 text-end items-center md:flex justify-end">
+                <a
+                    href="connexion.html"
+                    class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                    >Se connecter</a
+                >
+            </div>
 
-            <a
-                href="connexion.html"
-                class="hidden p-5 col-span-4 col-end-13 text-end items-center md:flex justify-end hover:underline"
-                >Se connecter</a
-            >
             <div
-                class="col-span-8 text-white bg-blue-400 dark:bg-gray-800 inset-shadow-sm dark:inset-shadow-sm inset-shadow-blue-600/100 dark:inset-shadow-gray-900/100 rounded-md md:hidden h-70 m-2">
-                <ul class="text-center pt-10">
-                    <li class="my-2 font-bold hover:underline"><a href="index.html">Accueil</a></li>
-                    <li class="my-2 hover:underline"><a href="panier.html">Mon panier</a></li>
-                    <li class="mt-10 hover:underline"><a href="connexion.html">Se connecter</a></li>
+                class="col-span-8 flex items-center justify-center text-black dark:text-white bg-blue-300 dark:bg-gray-800 inset-shadow-sm dark:inset-shadow-sm inset-shadow-blue-600/100 dark:inset-shadow-gray-900/100 rounded-md md:hidden h-70 m-2">
+                <ul class="text-center text-2xl">
+                    <li class="my-4 font-bold hover:underline"><a href="index.html">Accueil</a></li>
+                    <li class="my-4 hover:underline"><a href="panier.html">Mon panier</a></li>
+                    <li class="mt-10 hover:underline">
+                        <a
+                            class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                            href="connexion.html"
+                            >Se connecter</a
+                        >
+                    </li>
                 </ul>
             </div>
         </nav>
