@@ -8,16 +8,19 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
         <link rel="stylesheet" href="style/css/style.css" />
         <link rel="stylesheet" href="style/tailwind.css" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
         <meta
             name="Votre panier d'achat"
             content="Vous pouvez consulter votre panier d'achat et poursuivre la commande ici!" />
     </head>
-    <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white">
-        <nav class="grid grid-cols-12 text-xl bg-none md:dark:bg-blue-950">
-            <h1 class="col-span-4">
-                <a href="index.html"
+    <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white grid grid-cols-12">
+        <nav
+            class="w-full fixed col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-none md:dark:bg-blue-950">
+            <h1 class="col-span-2 md:col-span-4">
+                <a href="index.html" class="inline-block"
                     ><img
+                        id="logo"
                         class="w-full max-w-22 min-w-18 p-3"
                         src="img/LOGO_COULEUR.svg"
                         alt="Logo de Synakode"
@@ -25,7 +28,7 @@
             </h1>
             <ul class="hidden col-span-4 md:flex p-5 items-center justify-center">
                 <li class="mx-2 hover:underline"><a href="index.html">Accueil</a></li>
-                <li class="mx-2 hover:underline font-bold"><a href="panier.html">Mon panier</a></li>
+                <li class="mx-2 font-bold hover:underline"><a href="panier.html">Mon panier</a></li>
             </ul>
             <div class="hidden p-5 col-span-4 col-end-13 text-end items-center md:flex justify-end">
                 <a
@@ -35,11 +38,16 @@
                 >
             </div>
 
+            <div class="md:hidden col-span-2 col-end-13 flex justify-center items-center">
+                <i class="bx bx-menu bx-lg absolute text-blue-600 dark:text-white" id="menuBtn"></i>
+            </div>
+
             <div
-                class="col-span-8 flex items-center justify-center text-black dark:text-white bg-blue-300 dark:bg-gray-800 inset-shadow-sm dark:inset-shadow-sm inset-shadow-blue-600/100 dark:inset-shadow-gray-900/100 rounded-md md:hidden h-70 m-2">
+                id="navMenu"
+                class="opacity-0 col-span-8 row-start-1 col-start-3 flex items-center justify-center text-black dark:text-white bg-blue-300 dark:bg-gray-800 inset-shadow-sm dark:inset-shadow-sm inset-shadow-blue-600/100 dark:inset-shadow-gray-900/100 rounded-md md:hidden h-70 m-2">
                 <ul class="text-center text-2xl">
                     <li class="my-4 hover:underline"><a href="index.html">Accueil</a></li>
-                    <li class="my-4 hover:underline font-bold">
+                    <li class="my-4 font-bold hover:underline">
                         <a href="panier.html">Mon panier</a>
                     </li>
                     <li class="mt-10 hover:underline">
@@ -52,8 +60,15 @@
                 </ul>
             </div>
         </nav>
-        <nav></nav>
-        <section></section>
-        <script src="script.js"></script>
+        <main class="row-start-2 col-span-12 pt-30">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ratione quod
+                consectetur sapiente voluptate excepturi. Maiores esse quisquam unde minima magnam
+                sequi aliquid. Earum suscipit dolores minima! Necessitatibus, quam labore.
+            </p>
+        </main>
+        <footer></footer>
+        <script src="js/animation.js"></script>
+        <script src="js/items.js"></script>
     </body>
 </html>
