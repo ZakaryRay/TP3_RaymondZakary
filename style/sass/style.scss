@@ -1,0 +1,17 @@
+.card {
+    margin: 30px 0;
+    display: flex;
+
+    &__name {
+        font-size: larger;
+    }
+    &__price {
+        text-decoration: overline;
+    }
+    &__description {
+        color: aqua;
+    }
+    &__id {
+        font-weight: 500;
+    }
+}
