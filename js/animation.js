@@ -105,7 +105,7 @@ const items = [
     },
     {
         id: 3,
-        name: "Carte de crédit à N.Martin",
+        name: "Carte de crédit",
         description: "Qui part à la chasse perd sa place.",
         imgsrc: "https://pngimg.com/uploads/credit_card/small/credit_card_PNG195.png",
         price: 299.97,
@@ -128,72 +128,72 @@ const items = [
     },
     {
         id: 6,
-        name: "Stylo Téléporteur",
-        description: "Tes notes de cours se retrouvent directement… dans un autre univers.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "Boeuf haché maigre",
+        description: "1kg de boeuf haché maigre.",
+        imgsrc: "https://pngimg.com/uploads/mince/small/mince_PNG50.png",
         price: 3.3,
     },
     {
         id: 7,
-        name: "Pizza Auto-Cuisante",
-        description: "Se prépare toute seule, mais mange parfois tes devoirs en entrée.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "Jack Daniel's",
+        description: "Vendeur exclusif au Québec depuis Trump.",
+        imgsrc: "https://pngimg.com/uploads/whisky/small/whisky_PNG141.png",
         price: 14.9,
     },
     {
         id: 8,
-        name: "Écouteurs Cactus",
-        description: "Qualité sonore piquante, déconseillés aux oreilles sensibles.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "Le numéro 4",
+        description: "4",
+        imgsrc: "https://pngimg.com/uploads/number4/small/number4_PNG15040.png",
         price: 59.99,
     },
     {
         id: 9,
-        name: "Mini-Dragon de Compagnie",
-        description: "Idéal pour réchauffer ton appart, moins pour tes rideaux.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "Tom Cruise",
+        description: "Combo idéal avec une laisse et un fouet",
+        imgsrc: "https://pngimg.com/uploads/tom_cruise/small/tom_cruise_PNG25.png",
         price: 350,
     },
     {
         id: 10,
-        name: "Sandwich Fluorescent",
-        description: "Brille dans le noir, parfait pour un pique-nique post-apocalyptique.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "BBQ",
+        description: "Un BBQ simple et conventionel",
+        imgsrc: "https://pngimg.com/uploads/grill/small/grill_PNG13962.png",
         price: 5.2,
     },
     {
         id: 11,
-        name: "Réveil Voyageur Temporel",
-        description: "Te réveille hier, aujourd’hui ou demain. Résultats non garantis.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "2 Trotinettes électriques",
+        description: "Un c'est bien, mais deux c'est mieux.",
+        imgsrc: "https://pngimg.com/uploads/electric_scooter/small/electric_scooter_PNG66.png",
         price: 75.0,
     },
     {
         id: 12,
-        name: "Chaise Flottante",
-        description: "Confort absolu, mais risque de dériver au milieu de la pièce.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "AK-47",
+        description: "RUSH B! RUSH B!",
+        imgsrc: "https://pngimg.com/uploads/ak47/small/ak47_PNG15466.png",
         price: 42,
     },
     {
         id: 13,
-        name: "Chargeur universel",
-        description: "Compatible avec tout, sauf ton propre téléphone.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "Captain America",
+        description: "Une réplique 1:1 de Captai America.",
+        imgsrc: "https://pngimg.com/uploads/captain_america/small/captain_america_PNG91.png",
         price: 22.2,
     },
     {
         id: 14,
-        name: "Clé USB Banane",
-        description: "Stocke des données… et du potassium.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "Chaise roulante",
+        description: "Non disponible à la livraison, doit être récupée au 4e étage.",
+        imgsrc: "https://pngimg.com/uploads/wheelchair/small/wheelchair_PNG82809.png",
         price: 16.9,
     },
     {
         id: 15,
-        name: "Poisson Rouge Robot",
-        description: "Ne meurt jamais, mais réclame des mises à jour logicielles quotidiennes.",
-        imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
+        name: "Pompe",
+        description: "Pompe pour gonfler plein de chose.",
+        imgsrc: "https://pngimg.com/uploads/air_pump/small/air_pump_PNG3.png",
         price: 199.95,
     },
 ];
@@ -201,14 +201,17 @@ const items = [
 const itemCards = document.getElementById("itemCards");
 
 items.forEach((item) => {
-    const div = document.createElement("div");
-    div.classList.add(
-        "item-card",
+    const info = document.createElement("div");
+    const card = document.createElement("div");
+    card.classList.add(
+        "card",
         "bg-blue-500",
         "rounded-xl",
         "p-2",
-        "col-span-4",
-        "h-100",
+        "lg:col-span-4",
+        "col-span-6",
+        "md:h-100",
+        "h-70",
         "flex",
         "flex-col"
     );
@@ -222,7 +225,7 @@ items.forEach((item) => {
     price.textContent = `Prix: ${item.price}$`;
 
     const description = document.createElement("p");
-    description.classList.add("card__description");
+    description.classList.add("card__description", "hidden", "md:block");
     description.textContent = item.description;
 
     const id = document.createElement("id");
@@ -230,10 +233,13 @@ items.forEach((item) => {
     id.textContent = `Numéro d'item: ${item.id}`;
 
     const img = document.createElement("img");
-    img.classList.add("card__img");
+    img.classList.add("card__img", "w-[50%]", "self-center", "my-auto");
     img.setAttribute("src", item.imgsrc);
 
-    div.append(img, name, price, description, id);
+    info.classList.add("card__info");
 
-    itemCards.appendChild(div);
+    info.append(name, price, description, id);
+    card.append(img, info);
+
+    itemCards.append(card);
 });

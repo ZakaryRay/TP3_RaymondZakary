@@ -1,17 +1,20 @@
 .card {
     margin: 30px 0;
     display: flex;
+    justify-content: space-between;
 
     &__name {
-        font-size: larger;
+        font-size: 1.7rem;
     }
     &__price {
-        text-decoration: overline;
+        font-size: large;
     }
     &__description {
         color: aqua;
     }
     &__id {
         font-weight: 500;
+    }
+    &__img {
     }
 }

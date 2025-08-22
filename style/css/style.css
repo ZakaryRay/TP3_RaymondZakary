@@ -1,12 +1,13 @@
 .card {
   margin: 30px 0;
   display: flex;
+  justify-content: space-between;
 }
 .card__name {
-  font-size: larger;
+  font-size: 1.7rem;
 }
 .card__price {
-  text-decoration: overline;
+  font-size: large;
 }
 .card__description {
   color: aqua;
