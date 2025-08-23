@@ -207,7 +207,7 @@ items.forEach((item) => {
         "card",
         "bg-blue-500",
         "rounded-xl",
-        "p-2",
+
         "lg:col-span-4",
         "col-span-6",
         "md:h-100",
@@ -233,10 +233,18 @@ items.forEach((item) => {
     id.textContent = `Numéro d'item: ${item.id}`;
 
     const img = document.createElement("img");
-    img.classList.add("card__img", "w-[50%]", "self-center", "my-auto");
+    img.classList.add(
+        "card__img",
+        "w-[50%]",
+        "self-center",
+        "my-auto",
+        "max-w-25",
+        "md:max-w-40",
+        "lg:max-w-50"
+    );
     img.setAttribute("src", item.imgsrc);
 
-    info.classList.add("card__info");
+    info.classList.add("card__info", "rounded-b-xl");
 
     info.append(name, price, description, id);
     card.append(img, info);
