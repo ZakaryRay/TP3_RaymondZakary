@@ -5,7 +5,7 @@
   background-color: white;
 }
 .card__info {
-  background-color: aquamarine;
+  background-color: #458bcb;
   padding: 10px;
 }
 .card__name {
@@ -15,7 +15,7 @@
   font-size: large;
 }
 .card__description {
-  color: aqua;
+  color: white;
 }
 .card__id {
   font-weight: 500;
