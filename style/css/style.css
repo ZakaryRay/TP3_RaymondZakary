@@ -20,3 +20,14 @@
 .card__id {
   font-weight: 500;
 }
+.card__add {
+  color: #458bcb;
+  padding: 6px 0;
+  background-color: rgb(228, 228, 228);
+  text-align: center;
+  margin: 20px 10px;
+}
+.card__add:hover {
+  background-color: #458bcb;
+  color: white;
+}

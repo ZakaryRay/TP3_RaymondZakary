@@ -43,7 +43,6 @@ const animateBtn = () => {
 
 menuBtn.addEventListener("click", () => {
     isOpen = !isOpen;
-    console.log("isOpen:", isOpen);
 
     if (isOpen) {
         menuBtn.classList.remove("bx-menu");
@@ -70,7 +69,6 @@ menuBtn.addEventListener("click", () => {
             {
                 opacity: 1,
                 scale: 1,
-
                 y: 0,
             },
             {
@@ -91,95 +89,91 @@ const items = [
         id: 1,
         name: "Cercueil",
         imgsrc: "https://pngimg.com/uploads/coffin/small/coffin_PNG35.png",
-        price: 3947.97,
-        categorie: "objet",
+        price: 3947,
     },
     {
         id: 2,
-        name: "Cassette SONY",
+        name: "Cassette",
         imgsrc: "https://pngimg.com/uploads/audio_cassette/small/audio_cassette_PNG16092.png",
-        price: 7.97,
-        categorie: "objet",
+        price: 7,
     },
     {
         id: 3,
         name: "Carte de crédit",
         imgsrc: "https://pngimg.com/uploads/credit_card/small/credit_card_PNG195.png",
-        price: 299.97,
-        categorie: "objet",
+        price: 299,
     },
     {
         id: 4,
         name: "Fouet",
         imgsrc: "https://pngimg.com/uploads/whip/small/whip_PNG24.png",
-        price: 89.97,
-        categorie: "objet",
+        price: 89,
     },
     {
         id: 5,
         name: "Laisse",
         imgsrc: "https://pngimg.com/uploads/leash/small/leash_PNG134.png",
-        price: 899.95,
+        price: 24,
     },
     {
         id: 6,
-        name: "Boeuf haché maigre",
+        name: "Boeuf haché",
         imgsrc: "https://pngimg.com/uploads/mince/small/mince_PNG50.png",
-        price: 3.3,
+        price: 13,
     },
     {
         id: 7,
         name: "Jack Daniel's",
         imgsrc: "https://pngimg.com/uploads/whisky/small/whisky_PNG141.png",
-        price: 14.9,
+        price: 48,
     },
     {
         id: 8,
-        name: "Le numéro 4",
+        name: "Numéro 4",
         imgsrc: "https://pngimg.com/uploads/number4/small/number4_PNG15040.png",
-        price: 59.99,
+        price: 4,
     },
     {
         id: 9,
         name: "Tom Cruise",
         imgsrc: "https://pngimg.com/uploads/tom_cruise/small/tom_cruise_PNG25.png",
-        price: 350,
+        price: "600M",
     },
     {
         id: 10,
         name: "BBQ",
         imgsrc: "https://pngimg.com/uploads/grill/small/grill_PNG13962.png",
-        price: 5.2,
+        price: 115,
     },
     {
         id: 11,
         name: "Trotinettes",
         imgsrc: "https://pngimg.com/uploads/electric_scooter/small/electric_scooter_PNG66.png",
-        price: 75.0,
+        price: 695,
     },
     {
         id: 12,
         name: "AK-47",
         imgsrc: "https://pngimg.com/uploads/ak47/small/ak47_PNG15466.png",
-        price: 42,
+        price: 1447,
     },
     {
         id: 13,
         name: "Captain America",
         imgsrc: "https://pngimg.com/uploads/captain_america/small/captain_america_PNG91.png",
-        price: 22.2,
+        price: 67345,
     },
     {
         id: 14,
         name: "Chaise roulante",
         imgsrc: "https://pngimg.com/uploads/wheelchair/small/wheelchair_PNG82809.png",
-        price: 16.9,
+        price: 357,
     },
     {
         id: 15,
         name: "Pompe",
         imgsrc: "https://pngimg.com/uploads/air_pump/small/air_pump_PNG3.png",
-        price: 199.95,
+        price: 8,
     },
 ];
 
@@ -195,8 +189,9 @@ items.forEach((item) => {
         "p-2",
         "lg:col-span-4",
         "col-span-6",
-        "h-100",
-
+        "md:h-150",
+        "lg:h-130",
+        "h-115",
         "flex",
         "flex-col"
     );
@@ -211,16 +206,32 @@ items.forEach((item) => {
 
     const id = document.createElement("id");
     id.classList.add("card__id");
-    id.textContent = `Numéro d'item: ${item.id}`;
+    id.textContent = `item: ${item.id}`;
 
     const img = document.createElement("img");
     img.classList.add("card__img", "self-center", "my-auto");
     img.setAttribute("src", item.imgsrc);
 
+    const addBtn = document.createElement("button");
+    addBtn.classList.add("card__add", "rounded-xl");
+    addBtn.textContent = "Ajouter au panier";
+
+    addBtn.addEventListener("click", () => {
+        console.log("click", item.id);
+        addToCart(item);
+    });
+
     info.classList.add("card__info", "rounded-xl");
 
     info.append(name, price, id);
-    card.append(img, info);
+    card.append(img, info, addBtn);
 
-    itemCards.append(card);
+    itemCards.appendChild(card);
 });
+
+const addToCart = (item) => {
+    console.log("add", item.name, "to cart");
+
+    cart.push(item);
+    console.log("Cart:", cart);
+};
