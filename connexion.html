@@ -14,10 +14,10 @@
             name="Boutique de matériel aléatoire"
             content="Notre super boutique en ligne vous offres une mutlitude de produit complètement aléatoire!" />
     </head>
-    <script src="script.js"></script>
+
     <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white grid grid-cols-12">
         <nav
-            class="w-full fixed col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-none md:dark:bg-blue-950">
+            class="w-full fixed col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-none dark:bg-blue-950">
             <h1 class="col-span-2 md:col-span-4">
                 <a href="index.html" class="inline-block"
                     ><img
@@ -34,7 +34,7 @@
             <div class="hidden p-5 col-span-4 col-end-13 text-end items-center md:flex justify-end">
                 <a
                     href="connexion.html"
-                    class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                    class="hidden bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                     >Se connecter</a
                 >
             </div>
@@ -51,7 +51,7 @@
                     <li class="my-4 hover:underline"><a href="panier.html">Mon panier</a></li>
                     <li class="mt-10 hover:underline">
                         <a
-                            class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                            class="hidden bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                             href="connexion.html"
                             >Se connecter</a
                         >
@@ -59,14 +59,160 @@
                 </ul>
             </div>
         </nav>
-        <main class="row-start-2 col-span-12 pt-30">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ratione quod
-                consectetur sapiente voluptate excepturi. Maiores esse quisquam unde minima magnam
-                sequi aliquid. Earum suscipit dolores minima! Necessitatibus, quam labore.
-            </p>
+
+        <main class="col-span-12 pt-30 mb-30" id="signIn">
+            <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+                <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <img src="img/LOGO_BLANC.svg" alt="Your Company" class="mx-auto h-10 w-auto" />
+                    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">
+                        Se connecter à Synakode
+                    </h2>
+                </div>
+
+                <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                    <form action="index.html" method="POST" class="space-y-6">
+                        <div>
+                            <label for="email" class="block text-sm/6 font-medium text-gray-100"
+                                >Adresse courriel</label
+                            >
+                            <div class="mt-2">
+                                <input
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    autocomplete="email"
+                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <label
+                                    for="password"
+                                    class="block text-sm/6 font-medium text-gray-100">
+                                    Mot de passe
+                                </label>
+                                <div class="text-sm">
+                                    <button
+                                        class="font-semibold text-indigo-400 hover:text-indigo-300">
+                                        Mot de passe oublié?
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <input
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                    autocomplete="current-password"
+                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <button
+                                type="submit"
+                                class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                                Se connecter
+                            </button>
+                        </div>
+                    </form>
+
+                    <p class="mt-10 text-center text-sm/6 text-gray-400">
+                        Pas encore de compte?
+                        <button
+                            id="signUpBtn"
+                            class="font-semibold text-indigo-400 hover:text-indigo-300">
+                            Inscrivez-vous
+                        </button>
+                    </p>
+                </div>
+            </div>
         </main>
-        <footer class="bg- text-white mt-auto col-span-12">
+
+        <main class="hidden col-span-12 pt-30 mb-30" id="signUp">
+            <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+                <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <img src="img/LOGO_BLANC.svg" alt="Your Company" class="mx-auto h-10 w-auto" />
+                    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">
+                        Créer un compte Synakode
+                    </h2>
+                </div>
+
+                <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                    <form action="index.html" method="POST" class="space-y-6">
+                        <div>
+                            <label for="email" class="block text-sm/6 font-medium text-gray-100"
+                                >Adresse courriel</label
+                            >
+                            <div class="mt-2">
+                                <input
+                                    id="emailSignUp"
+                                    type="emailSignUp"
+                                    name="emailSignUp"
+                                    autocomplete="emailSignUp"
+                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <label
+                                    for="password"
+                                    class="block text-sm/6 font-medium text-gray-100">
+                                    Mot de passe
+                                </label>
+                            </div>
+                            <div class="mt-2">
+                                <input
+                                    id="passwordSignUp"
+                                    type="passwordSignUp"
+                                    name="passwordSignUp"
+                                    autocomplete="current-password"
+                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <label
+                                    for="password"
+                                    class="block text-sm/6 font-medium text-gray-100">
+                                    Confirmer le mot de passe
+                                </label>
+                            </div>
+
+                            <div class="mt-2">
+                                <input
+                                    id="confirmPasswordSignUp"
+                                    type="confirmPasswordSignUp"
+                                    name="confirmPasswordSignUp"
+                                    autocomplete="current-password"
+                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <button
+                                type="submit"
+                                class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                                Créer le compte
+                            </button>
+                        </div>
+                    </form>
+
+                    <p class="mt-10 text-center text-sm/6 text-gray-400">
+                        Déjà un compte?
+                        <button
+                            id="signInBtn"
+                            class="font-semibold text-indigo-400 hover:text-indigo-300">
+                            Se connecter
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-blue-950 text-white mt-auto col-span-12 footer">
             <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">
                 <div class="flex items-center mx-auto col-span-12 lg:col-span-4">
                     <img src="/img/LOGO_BLANC.svg" alt="Logo" class="h-8 mr-2" />
@@ -83,6 +229,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/connexion.js"></script>
         <script src="js/animation.js"></script>
     </body>
 </html>
