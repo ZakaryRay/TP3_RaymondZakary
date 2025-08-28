@@ -59,20 +59,44 @@
             </div>
         </nav>
         <main class="col-span-12 pt-30 grid grid-cols-12">
-            <aside class="col-span-3 p-2">
-                <h2>Boutique en ligne</h2>
-                <div>
+            <h2 class="text-2xl col-span-12 text-center">Boutique en ligne</h2>
+            <aside class="col-span-3 p-2 flex flex-col">
+                <div class="text-center p-5">
                     <ul>
-                        <li>Trier par:</li>
-                        <li>Prix - Croissant</li>
-                        <li>Prix - Décroissant</li>
+                        <li class="text-xl my-5">Trier par:</li>
+                        <li class="my-2">
+                            <button class="hover:underline hover:font-bold">
+                                Prix - Croissant
+                            </button>
+                        </li>
+                        <li class="my-2">
+                            <button class="hover:underline hover:font-bold">
+                                Prix - Décroissant
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </aside>
 
             <section id="itemCards" class="grid grid-cols-12 gap-3 col-span-9 p-3"></section>
         </main>
-        <footer></footer>
+        <footer class="bg- text-white mt-auto col-span-12">
+            <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">
+                <div class="flex items-center mx-auto col-span-12 lg:col-span-4">
+                    <img src="/img/LOGO_BLANC.svg" alt="Logo" class="h-8 mr-2" />
+                    <span class="font-bold text-lg">Synakode</span>
+                </div>
+                <nav class="flex gap-6 text-sm mx-auto col-span-12 lg:col-span-4 my-5">
+                    <a href="index.html" class="hover:underline"> Accueil </a>
+
+                    <a href="mailto:info@synakode.com" class="hover:underline"> Nous contacter </a>
+                </nav>
+                <div
+                    class="text-xs mx-auto text-gray-300 flex items-center col-span-12 lg:col-span-4">
+                    © 2025 Synakode. Tous droits réservés.
+                </div>
+            </div>
+        </footer>
         <script src="js/animation.js"></script>
     </body>
 </html>
