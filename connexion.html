@@ -17,7 +17,7 @@
 
     <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white grid grid-cols-12">
         <nav
-            class="w-full fixed col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-none dark:bg-blue-950">
+            class="w-full fixed col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-none bg-blue-950 text-white">
             <h1 class="col-span-2 md:col-span-4">
                 <a href="index.html" class="inline-block"
                     ><img
@@ -63,8 +63,16 @@
         <main class="col-span-12 pt-30 mb-30" id="signIn">
             <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
                 <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <img src="img/LOGO_BLANC.svg" alt="Your Company" class="mx-auto h-10 w-auto" />
-                    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">
+                    <img
+                        src="img/LOGO_BLANC.svg"
+                        alt="Logo Synakode"
+                        class="hidden dark:block mx-auto h-10 w-auto" />
+                    <img
+                        src="img/LOGO_COULEUR.svg"
+                        alt="Logo Synakode"
+                        class="dark:hidden mx-auto h-10 w-auto" />
+                    <h2
+                        class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-blue-400 dark:text-white">
                         Se connecter à Synakode
                     </h2>
                 </div>
@@ -72,7 +80,7 @@
                 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form action="index.html" method="POST" class="space-y-6">
                         <div>
-                            <label for="email" class="block text-sm/6 font-medium text-gray-100"
+                            <label for="email" class="block text-sm/6 font-medium text-blue-400"
                                 >Adresse courriel</label
                             >
                             <div class="mt-2">
@@ -81,7 +89,7 @@
                                     type="email"
                                     name="email"
                                     autocomplete="email"
-                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                    class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 outline-blue-500/40 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6" />
                             </div>
                         </div>
 
@@ -89,12 +97,11 @@
                             <div class="flex items-center justify-between">
                                 <label
                                     for="password"
-                                    class="block text-sm/6 font-medium text-gray-100">
+                                    class="block text-sm/6 font-medium text-blue-400">
                                     Mot de passe
                                 </label>
                                 <div class="text-sm">
-                                    <button
-                                        class="font-semibold text-indigo-400 hover:text-indigo-300">
+                                    <button class="font-semibold text-blue-400 hover:text-blue-500">
                                         Mot de passe oublié?
                                     </button>
                                 </div>
@@ -105,14 +112,14 @@
                                     type="password"
                                     name="password"
                                     autocomplete="current-password"
-                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                    class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 outline-blue-500/40 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6" />
                             </div>
                         </div>
 
                         <div>
                             <button
                                 type="submit"
-                                class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                                class="flex w-full justify-center rounded-md bg-blue-400 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                                 Se connecter
                             </button>
                         </div>
@@ -122,7 +129,7 @@
                         Pas encore de compte?
                         <button
                             id="signUpBtn"
-                            class="font-semibold text-indigo-400 hover:text-indigo-300">
+                            class="font-semibold text-blue-400 hover:text-blue-500">
                             Inscrivez-vous
                         </button>
                     </p>
@@ -142,7 +149,7 @@
                 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form action="index.html" method="POST" class="space-y-6">
                         <div>
-                            <label for="email" class="block text-sm/6 font-medium text-gray-100"
+                            <label for="email" class="block text-sm/6 font-medium text-blue-400"
                                 >Adresse courriel</label
                             >
                             <div class="mt-2">
@@ -151,7 +158,7 @@
                                     type="emailSignUp"
                                     name="emailSignUp"
                                     autocomplete="emailSignUp"
-                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                    class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 outline-blue-500/40 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6" />
                             </div>
                         </div>
 
@@ -159,7 +166,7 @@
                             <div class="flex items-center justify-between">
                                 <label
                                     for="password"
-                                    class="block text-sm/6 font-medium text-gray-100">
+                                    class="block text-sm/6 font-medium text-blue-400">
                                     Mot de passe
                                 </label>
                             </div>
@@ -169,25 +176,25 @@
                                     type="passwordSignUp"
                                     name="passwordSignUp"
                                     autocomplete="current-password"
-                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                    class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 outline-blue-500/40 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6" />
                             </div>
                         </div>
                         <div>
                             <div class="flex items-center justify-between">
                                 <label
                                     for="password"
-                                    class="block text-sm/6 font-medium text-gray-100">
+                                    class="block text-sm/6 font-medium text-blue-400">
                                     Confirmer le mot de passe
                                 </label>
                             </div>
 
                             <div class="mt-2">
-                                <input
-                                    id="confirmPasswordSignUp"
-                                    type="confirmPasswordSignUp"
-                                    name="confirmPasswordSignUp"
-                                    autocomplete="current-password"
-                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                <input id="confirmPasswordSignUp" type="confirmPasswordSignUp"
+                                name="confirmPasswordSignUp" autocomplete="current-password"
+                                class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base
+                                dark:text-white outline-1 -outline-offset-1 outline-blue-500/40
+                                placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2
+                                focus:outline-blue-500 sm:text-sm/6"" />
                             </div>
                         </div>
 
@@ -229,6 +236,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/install.js"></script>
         <script src="js/connexion.js"></script>
         <script src="js/animation.js"></script>
     </body>

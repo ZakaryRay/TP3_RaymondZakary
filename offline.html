@@ -14,13 +14,13 @@
             name="Boutique de matériel aléatoire"
             content="Notre super boutique en ligne vous offres une mutlitude de produit complètement aléatoire!" />
         <script>
-            if ("serviceWorker" in navigator) {
-                window.addEventListener("load", () => {
-                    navigator.serviceWorker.register("service-worker.js").then((reg) => {
-                        console.log("Service worker registered", reg);
-                    });
-                });
-            }
+            // if ("serviceWorker" in navigator) {
+            //     window.addEventListener("load", () => {
+            //         navigator.serviceWorker.register("service-worker.js").then((reg) => {
+            //             console.log("Service worker registered", reg);
+            //         });
+            //     });
+            // }
         </script>
     </head>
     <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white grid grid-cols-12">
@@ -57,27 +57,22 @@
                 <ul class="text-center text-2xl">
                     <li class="my-4 font-bold hover:underline"><a href="index.html">Accueil</a></li>
                     <li class="my-4 hover:underline"><a href="panier.html">Mon panier</a></li>
-                    <li class="mt-10">
+                    <li class="mt-10 hover:underline">
                         <a
                             class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                             href="connexion.html"
                             >Se connecter</a
                         >
                     </li>
-                    <li class="mt-5">
-                        <button
-                            aria-label="Install"
-                            id="btnInstall"
-                            class="hidden bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500">
-                            Installer l'application
-                        </button>
-                    </li>
                 </ul>
             </div>
         </nav>
 
         <main class="col-span-12 pt-30 grid grid-cols-12">
-            <h2 class="text-2xl col-span-12 text-center">Boutique en ligne</h2>
+            <h2 class="text-2xl col-span-12 text-center">
+                Boutique en ligne - Mode hors ligne(Fonctionnalités 'Ajouter au panier' et 'Se
+                connecter' sont désactivés)
+            </h2>
             <aside class="col-span-3 p-2 flex flex-col">
                 <div class="text-center p-5">
                     <ul>

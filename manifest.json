@@ -1,6 +1,6 @@
 {
-    "short_name": "Synakode E-commerce",
-    "name": "Synakode",
+    "short_name": "Synakode",
+    "name": "Synakode E-commerce",
     "icons": [
         {
             "purpose": "maskable",
@@ -37,6 +37,7 @@
     "display": "standalone",
     "theme_color": "#458bcb",
     "background_color": "#ebebeb",
+    "orientation": "any",
     "screenshots": [
         {
             "src": "/img/screenshots/homepage-wide.png",
