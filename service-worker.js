@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v1";
+const CACHE_NAME = "static-cache-v2";
 
 const FILES_TO_CACHE = ["offline.html"];
 
@@ -32,7 +32,7 @@ self.addEventListener("activate", (evt) => {
         })
     );
 
-    self.cleints.claim();
+    self.clients.claim();
 });
 
 self.addEventListener("fetch", (evt) => {
