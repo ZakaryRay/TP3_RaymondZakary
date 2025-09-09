@@ -3,10 +3,7 @@ const installButton = document.getElementById("btnInstall");
 
 installButton.addEventListener("click", installPWA);
 
-window.addEventListener("beforeinstallprompt", (evt) => {
-    console.log("beforeinstallprompt fired!", evt);
-    saveBeforeInstallPromptEvent(evt);
-});
+window.addEventListener("beforeinstallprompt", saveBeforeInstallPromptEvent);
 
 function saveBeforeInstallPromptEvent(evt) {
     deferredInstallPrompt = evt;

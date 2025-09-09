@@ -38,6 +38,7 @@
     "theme_color": "#458bcb",
     "background_color": "#ebebeb",
     "orientation": "any",
+    "description": "Site web e-commerce de Synakode",
     "screenshots": [
         {
             "src": "/img/maskable/wide.png",
