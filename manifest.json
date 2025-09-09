@@ -40,14 +40,14 @@
     "orientation": "any",
     "screenshots": [
         {
-            "src": "/img/screenshots/homepage-wide.png",
+            "src": "/img/maskable/wide.png",
             "sizes": "1280x720",
             "type": "image/png",
             "form_factor": "wide",
             "label": "Page d’accueil"
         },
         {
-            "src": "/img/screenshots/product-mobile.png",
+            "src": "/img/maskable/narrow.png",
             "sizes": "540x720",
             "type": "image/png",
             "form_factor": "narrow",

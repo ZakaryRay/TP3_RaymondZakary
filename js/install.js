@@ -27,8 +27,7 @@ function installPWA(evt) {
     });
 }
 
-window.addEventListener("appinstalled", logAppInstalled);
-
 const logAppInstalled = (evt) => {
     console.log("L'application Synakode est installé.", evt);
 };
+window.addEventListener("appinstalled", logAppInstalled);
