@@ -1,6 +1,6 @@
-const CACHE_NAME = "static-cache-v5";
+const CACHE_NAME = "static-cache-v6";
 
-const FILES_TO_CACHE = ["offline.html"];
+const FILES_TO_CACHE = ["offline.html", "air_pump_PNG3.png", "coffin_PNG35.png"];
 
 self.addEventListener("install", (evt) => {
     console.log("[ServiceWorker] install");
