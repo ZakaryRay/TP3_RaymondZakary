@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v5";
+const CACHE_NAME = "static-cache-v6";
 
 const FILES_TO_CACHE = ["offline.html"];
 
@@ -43,7 +43,7 @@ self.addEventListener("fetch", (evt) => {
     }
 
     evt.respondWith(
-        fetch(evt.request).catch(() => {
+        fetch(evt.request).catch(async () => {
             return caches.open(CACHE_NAME).then((cache) => {
                 return cache.match("/offline.html");
             });
