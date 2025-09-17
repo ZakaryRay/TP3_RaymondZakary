@@ -60,17 +60,146 @@
                 </ul>
             </div>
         </nav>
-        <main class="row-start-2 col-span-12">
-            <h2 class="text-center text-3xl pt-10">Panier</h2>
-            <section id="cartSection" class="grid grid-cols-12 gap-3 col-span-9 p-3">
-                <div>
-                    
-
+        <main class="row-start-2 col-span-12 grid grid-cols-12 p-3 gap-5">
+            <h2 class="text-center text-3xl pt-10 col-span-12">Mon panier: 2 items</h2>
+            <section id="cartSection" class="gap-3 col-span-12 lg:col-span-8 mt-10">
+                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10">
+                    <div class="col-span-3 lg:col-span-1">
+                        <img
+                            src="img/articles/tom_cruise_PNG25.png"
+                            alt="Image de Tom Cruise"
+                            class="bg-white rounded-xl" />
+                    </div>
+                    <div
+                        class="col-span-9 lg:col-span-11 flex justify-between items-center text-lg lg:text-2xl ml-3 lg:ml-10">
+                        <div>
+                            <h3 class="text-xl lg:text-3xl">Tom Cruise</h3>
+                            <p class="text-sm lg:text-lg">Numéro d'item: 9</p>
+                        </div>
+                        <div>
+                            <form action="">
+                                <label for="quantity">Quantité:</label>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    id="qtyFirst"
+                                    value="1"
+                                    class="w-10 bg-blue-200 text-black rounded" />
+                            </form>
+                        </div>
+                        <div class="mr-3 lg:mr-10">
+                            <p>Prix: 2974$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10">
+                    <div class="col-span-3 lg:col-span-1">
+                        <img
+                            src="img/articles/whip_PNG24.png"
+                            alt="Image de fouet"
+                            class="bg-white rounded-xl" />
+                    </div>
+                    <div
+                        class="col-span-9 lg:col-span-11 flex justify-between items-center text-lg lg:text-2xl ml-3 lg:ml-10">
+                        <div>
+                            <h3 class="text-xl lg:text-3xl">Fouet</h3>
+                            <p class="text-sm lg:text-lg">Numéro d'item: 4</p>
+                        </div>
+                        <div>
+                            <form action="">
+                                <label for="quantity">Quantité:</label>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    id="qtySecond"
+                                    value="1"
+                                    class="w-10 bg-blue-200 text-black rounded" />
+                            </form>
+                        </div>
+                        <div class="mr-3 lg:mr-10">
+                            <p>Prix: 89$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10">
+                    <div class="col-span-3 lg:col-span-1">
+                        <img
+                            src="img/articles/whisky_PNG141.png"
+                            alt="Bouteille de Jack Daniel's"
+                            class="bg-white rounded-xl" />
+                    </div>
+                    <div
+                        class="col-span-9 lg:col-span-11 flex justify-between items-center text-lg lg:text-2xl ml-3 lg:ml-10">
+                        <div>
+                            <h3 class="text-xl lg:text-3xl">Jack Daniel's</h3>
+                            <p class="text-sm lg:text-lg">Numéro d'item: 7</p>
+                        </div>
+                        <div>
+                            <form action="">
+                                <label for="quantity">Quantité:</label>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    id="qtyThird"
+                                    value="1"
+                                    class="w-10 bg-blue-200 text-black rounded" />
+                            </form>
+                        </div>
+                        <div class="mr-3 lg:mr-10">
+                            <p>Prix: 48$</p>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <aside></aside>
+            <aside
+                class="col-span-12 lg:col-span-4 mt-10 p-5 bg-blue-100 text-black flex flex-col justify-between rounded-xl">
+                <h3 class="text-center text-3xl">Sommaire de la commande</h3>
+                <div>
+                    <p>Montant avant taxes: <span id="beforeTax"></span>$</p>
+                </div>
+                <div>
+                    <p>Taxes: <span id="totalTax"></span>$</p>
+                </div>
+                <div class="text-xl">
+                    <p>Montant total: <span id="total"></span>$</p>
+                </div>
+
+                <form
+                    action="confirmation.html"
+                    onsubmit="handleSubmit(event)"
+                    class="self-center mt-20">
+                    <div class="">
+                        <div>
+                            <label for="Email"
+                                ><span class="text-red-600">*</span>Adresse Courriel:</label
+                            >
+                            <input
+                                placeholder="nom.prenom@exemple.com"
+                                type="text"
+                                id="email"
+                                class="bg-blue-200 rounded w-60 text-black p-1" />
+                            <div>
+                                <p class="text-center text-sm text-red-500 mt-1" id="error" hidden>
+                                    L'adresse courriel entré n'est pas valide
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center my-5">
+                        <input type="checkbox" />
+                        <label for="infolettre" class="font-bold">S'abonner à l'infolettre</label>
+                    </div>
+                    <div class="flex justify-center">
+                        <label for="submit" hidden>Soumette la commande</label>
+                        <input
+                            type="submit"
+                            value="Soumettre la commande"
+                            class="p-3 text-xl bg-blue-500 rounded hover:bg-blue-600" />
+                    </div>
+                </form>
+            </aside>
         </main>
-        <footer class="text-white mt-100 col-span-12">
+        <footer class="text-white col-span-12">
             <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">
                 <div class="flex items-center mx-auto col-span-12 lg:col-span-4">
                     <img src="/img/LOGO_BLANC.svg" alt="Logo" class="h-8 mr-2" />
@@ -87,6 +216,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/panier.js"></script>
         <script src="js/animation.js"></script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v6";
+const CACHE_NAME = "static-cache-v7";
 
 const FILES_TO_CACHE = ["offline.html", "air_pump_PNG3.png", "coffin_PNG35.png"];
 
