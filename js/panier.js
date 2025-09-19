@@ -55,7 +55,6 @@ qtyThird.addEventListener("change", (e) => {
 updateTotal();
 
 const handleSubmit = (e) => {
-    e.preventDefault();
     const erreur = document.getElementById("error");
     const emailInput = document.getElementById("email");
     const email = emailInput.value.trim();
@@ -66,10 +65,12 @@ const handleSubmit = (e) => {
         erreur.setAttribute("hidden");
         emailInput.classList.remove("bg-red-300", "outline-red-500", "outline-2");
     } else if (email.length < 1) {
-        erreur.innerHTML = "Le champ ne peut être vide.";
+        e.preventDefault();
+        erreur.innerHTML = "L'adresse courriel est obligatoire.";
         emailInput.classList.add("bg-red-300", "outline-red-500", "outline-2");
         erreur.removeAttribute("hidden");
     } else if (!emailRegex.test(email)) {
+        e.preventDefault();
         erreur.innerHTML = "L'adresse courriel n'est pas valide.";
         emailInput.classList.add("bg-red-300", "outline-red-500", "outline-2");
         erreur.removeAttribute("hidden");

@@ -33,7 +33,7 @@
             <div class="hidden p-5 col-span-4 col-end-13 text-end items-center md:flex justify-end">
                 <a
                     href="connexion.html"
-                    class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                    class="transition duration-600 active:scale-95 bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                     >Se connecter</a
                 >
             </div>
@@ -52,7 +52,7 @@
                     </li>
                     <li class="mt-10 hover:underline">
                         <a
-                            class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                            class="transition duration-600 active:scale-95 bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                             href="connexion.html"
                             >Se connecter</a
                         >
@@ -61,7 +61,7 @@
             </div>
         </nav>
         <main class="row-start-2 col-span-12 grid grid-cols-12 p-3 gap-5">
-            <h2 class="text-center text-3xl pt-10 col-span-12">Mon panier: 2 items</h2>
+            <h2 class="text-center text-3xl pt-10 col-span-12">Mon panier</h2>
             <section id="cartSection" class="gap-3 col-span-12 lg:col-span-8 mt-10">
                 <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10">
                     <div class="col-span-3 lg:col-span-1">
@@ -153,15 +153,15 @@
             </section>
             <aside
                 class="col-span-12 lg:col-span-4 mt-10 p-5 bg-blue-100 text-black flex flex-col justify-between rounded-xl">
-                <h3 class="text-center text-3xl">Sommaire de la commande</h3>
-                <div>
-                    <p>Montant avant taxes: <span id="beforeTax"></span>$</p>
+                <h3 class="text-center text-3xl mb-10">Sommaire de la commande</h3>
+                <div class="my-3">
+                    <p>Montant avant taxes: <span id="beforeTax" class="font-bold"></span>$</p>
                 </div>
-                <div>
-                    <p>Taxes: <span id="totalTax"></span>$</p>
+                <div class="my-3">
+                    <p>Taxes: <span id="totalTax" class="font-bold"></span>$</p>
                 </div>
-                <div class="text-xl">
-                    <p>Montant total: <span id="total"></span>$</p>
+                <div class="text-xl my-3">
+                    <p>Montant total: <span id="total" class="font-bold"></span>$</p>
                 </div>
 
                 <form
@@ -199,7 +199,7 @@
                 </form>
             </aside>
         </main>
-        <footer class="text-white col-span-12">
+        <footer class="text-white col-span-12 bg-blue-950 mt-30">
             <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">
                 <div class="flex items-center mx-auto col-span-12 lg:col-span-4">
                     <img src="/img/LOGO_BLANC.svg" alt="Logo" class="h-8 mr-2" />

@@ -38,20 +38,11 @@
             <ul class="hidden col-span-4 md:flex p-5 items-center justify-center">
                 <li class="mx-2 font-bold hover:underline"><a href="index.html">Accueil</a></li>
                 <li class="mx-2 hover:underline"><a href="panier.html">Mon panier</a></li>
-                <li class="mt-5">
-                    <button
-                        hidden
-                        aria-label="Install"
-                        id="btnInstall"
-                        class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500">
-                        Installer l'application
-                    </button>
-                </li>
             </ul>
             <div class="hidden p-5 col-span-4 col-end-13 text-end items-center md:flex justify-end">
                 <a
                     href="connexion.html"
-                    class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                    class="transition duration-600 active:scale-95 bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                     >Se connecter</a
                 >
             </div>
@@ -68,7 +59,7 @@
                     <li class="my-4 hover:underline"><a href="panier.html">Mon panier</a></li>
                     <li class="mt-10">
                         <a
-                            class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                            class="transition duration-600 active:scale-95 bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                             href="connexion.html"
                             >Se connecter</a
                         >
@@ -85,27 +76,16 @@
             </div>
         </nav>
 
-        <main class="col-span-12 pt-30 grid grid-cols-12">
-            <h2 class="text-2xl col-span-12 text-center">Boutique en ligne</h2>
-            <aside class="col-span-3 p-2 flex flex-col">
-                <div class="text-center p-5">
-                    <ul>
-                        <li class="text-xl my-5">Trier par:</li>
-                        <li class="my-2">
-                            <button class="hover:underline hover:font-bold">
-                                Prix - Croissant
-                            </button>
-                        </li>
-                        <li class="my-2">
-                            <button class="hover:underline hover:font-bold">
-                                Prix - Décroissant
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </aside>
-
-            <section id="itemCards" class="grid grid-cols-12 gap-3 col-span-9 p-3"></section>
+        <main class="col-span-12 p-3 grid grid-cols-12">
+            <h2 class="text-center text-3xl pt-10 col-span-12 mb-15">Boutique en ligne</h2>
+            <section class="col-span-12 mb-20">
+                <p class="text-center text-2xl">
+                    Notre super boutique en ligne vous offres une mutlitude de produit complètement
+                    aléatoire!
+                </p>
+            </section>
+            <section class="border-2 border-b col-span-12 mb-15"></section>
+            <section id="itemCards" class="grid grid-cols-12 gap-3 col-span-12 p-3"></section>
         </main>
         <footer class="bg-blue-950 text-white mt-auto col-span-12 footer">
             <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">

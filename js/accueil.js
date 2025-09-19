@@ -98,16 +98,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         card.classList.add(
             "card",
-            "bg-blue-500",
-            "rounded-xl",
-            "p-2",
+            "bg-white",
+            "rounded-2xl",
+            "p-4",
             "lg:col-span-4",
             "col-span-6",
             "md:h-150",
             "lg:h-130",
             "h-115",
             "flex",
-            "flex-col"
+            "flex-col",
+            "shadow-md",
+            "hover:shadow-xl",
+            "transition",
+            "duration-300",
+            "border",
+            "border-gray-100"
         );
 
         const name = document.createElement("h3");
@@ -127,7 +133,25 @@ document.addEventListener("DOMContentLoaded", () => {
         img.setAttribute("src", item.imgsrc);
 
         const addBtn = document.createElement("button");
-        addBtn.classList.add("card__add", "rounded-xl");
+        addBtn.classList.add(
+            "card__add",
+            "rounded-xl",
+            "flex",
+            "justify-center",
+            "items-center",
+            "px-4",
+            "py-2",
+            "mt-3",
+            "bg-blue-500",
+            "text-white",
+            "font-medium",
+            "shadow-md",
+            "transition",
+            "duration-400",
+            "hover:bg-blue-600",
+            "hover:shadow-lg",
+            "active:scale-95"
+        );
         addBtn.textContent = "Ajouter au panier";
 
         addBtn.addEventListener("click", () => {
@@ -135,14 +159,25 @@ document.addEventListener("DOMContentLoaded", () => {
             addToCart(item);
         });
 
-        info.classList.add("card__info", "rounded-xl");
+        info.classList.add(
+            "card__info",
+            "rounded-xl",
+            "bg-gray-50",
+            "p-3",
+            "mt-3",
+            "flex",
+            "flex-col",
+            "gap-1",
+            "text-white",
+            "shadow-inner"
+        );
         itemCards.append(card);
         info.append(name, price, id);
 
         card.append(img, info, addBtn);
     });
 });
-
+const cart = [];
 const addToCart = (item) => {
     console.log("add", item.name, "to cart");
 

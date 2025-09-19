@@ -78,7 +78,11 @@
                 </div>
 
                 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form action="index.html" method="POST" class="space-y-6">
+                    <form
+                        class="space-y-6"
+                        id="signInForm"
+                        action="index.html"
+                        onsubmit="handleSignIn(event)">
                         <div>
                             <label for="email" class="block text-sm/6 font-medium text-blue-400"
                                 >Adresse courriel</label
@@ -88,8 +92,10 @@
                                     id="email"
                                     type="email"
                                     name="email"
-                                    autocomplete="email"
                                     class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 outline-blue-500/40 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6" />
+                            </div>
+                            <div>
+                                <p class="erreur"></p>
                             </div>
                         </div>
 
@@ -101,9 +107,9 @@
                                     Mot de passe
                                 </label>
                                 <div class="text-sm">
-                                    <button class="font-semibold text-blue-400 hover:text-blue-500">
+                                    <a class="font-semibold text-blue-400 hover:text-blue-500">
                                         Mot de passe oublié?
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <div class="mt-2">
@@ -113,6 +119,9 @@
                                     name="password"
                                     autocomplete="current-password"
                                     class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 outline-blue-500/40 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6" />
+                            </div>
+                            <div>
+                                <p class="erreur"></p>
                             </div>
                         </div>
 
@@ -147,7 +156,11 @@
                 </div>
 
                 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form action="index.html" method="POST" class="space-y-6">
+                    <form
+                        action="index.html"
+                        id="signUpForm"
+                        onsubmit="handleSignUp(event)"
+                        class="space-y-6">
                         <div>
                             <label for="email" class="block text-sm/6 font-medium text-blue-400"
                                 >Adresse courriel</label
@@ -155,10 +168,12 @@
                             <div class="mt-2">
                                 <input
                                     id="emailSignUp"
-                                    type="emailSignUp"
+                                    type="email"
                                     name="emailSignUp"
-                                    autocomplete="emailSignUp"
                                     class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 outline-blue-500/40 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6" />
+                            </div>
+                            <div>
+                                <p class="erreur"></p>
                             </div>
                         </div>
 
@@ -173,10 +188,13 @@
                             <div class="mt-2">
                                 <input
                                     id="passwordSignUp"
-                                    type="passwordSignUp"
+                                    type="password"
                                     name="passwordSignUp"
                                     autocomplete="current-password"
                                     class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 outline-blue-500/40 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm/6" />
+                            </div>
+                            <div>
+                                <p class="erreur"></p>
                             </div>
                         </div>
                         <div>
@@ -189,12 +207,15 @@
                             </div>
 
                             <div class="mt-2">
-                                <input id="confirmPasswordSignUp" type="confirmPasswordSignUp"
+                                <input id="confirmPasswordSignUp" type="password"
                                 name="confirmPasswordSignUp" autocomplete="current-password"
                                 class="block w-full rounded-md bg-blue-300/20 px-3 py-1.5 text-base
                                 dark:text-white outline-1 -outline-offset-1 outline-blue-500/40
                                 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2
                                 focus:outline-blue-500 sm:text-sm/6"" />
+                            </div>
+                            <div>
+                                <p class="erreur"></p>
                             </div>
                         </div>
 
