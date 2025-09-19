@@ -15,7 +15,7 @@
             content="Notre super boutique en ligne vous offres une mutlitude de produit complètement aléatoire!" />
     </head>
 
-    <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white grid grid-cols-12">
+    <body class="bg-gray-300 text-black grid grid-cols-12">
         <nav
             class="w-full sticky top-0 col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-blue-950 text-white">
             <h1 class="col-span-2 md:col-span-4 flex">
@@ -40,12 +40,12 @@
             </div>
 
             <div class="md:hidden col-span-2 col-end-13 flex justify-center items-center">
-                <i class="bx bx-menu bx-lg text-blue-600 dark:text-white" id="menuBtn"></i>
+                <i class="bx bx-menu bx-lg text-blue-600" id="menuBtn"></i>
             </div>
 
             <div
                 id="navMenu"
-                class="opacity-0 col-span-8 row-start-1 col-start-3 flex items-center justify-center text-black dark:text-white bg-blue-300 dark:bg-gray-800 inset-shadow-sm dark:inset-shadow-sm inset-shadow-blue-600/100 dark:inset-shadow-gray-900/100 rounded-md md:hidden h-70 m-2">
+                class="opacity-0 col-span-8 row-start-1 col-start-3 flex items-center justify-center text-black bg-blue-300 inset-shadow-sm inset-shadow-blue-600/100 rounded-md md:hidden h-70 m-2">
                 <ul class="text-center text-2xl">
                     <li class="my-4 hover:underline"><a href="index.html">Accueil</a></li>
                     <li class="my-4 font-bold hover:underline">
@@ -62,12 +62,22 @@
             </div>
         </nav>
         <main class="col-span-12">
-            <section>
-                <h2>Bravo! Votre commande à bien été procédé.</h2>
-                <p>Une confirmation vous seras directement envoyé à votre adresse courriel.</p>
+            <section class="flex flex-col">
+                <div class="text-3xl text-center mt-20">
+                    <h1>Bravo ! Votre commande a bien été traitée.</h1>
+                    <p>Une confirmation vous sera directement envoyée à votre adresse courriel.</p>
+                </div>
+                <div class="flex justify-center mt-50">
+                    <a
+                        href="index.html"
+                        role="button"
+                        class="flex w-70 justify-center rounded-md bg-blue-500 px-6 py-3 text-xl font-semibold text-white hover:bg-blue-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 p-3 transition duration-100 active:scale-95 inset-shadow-sm inset-shadow-blue-600 active:inset-shadow-blue-800">
+                        Retourner à l'accueil
+                    </a>
+                </div>
             </section>
         </main>
-        <footer class="bg-blue-950 text-white mt-auto col-span-12 footer">
+        <footer class="bg-blue-950 text-white col-span-12 mt-80">
             <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">
                 <div class="flex items-center mx-auto col-span-12 lg:col-span-4">
                     <img src="/img/LOGO_BLANC.svg" alt="Logo" class="h-8 mr-2" />

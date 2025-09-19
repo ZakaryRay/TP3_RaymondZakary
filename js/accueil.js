@@ -92,91 +92,110 @@ const items = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    items.forEach((item) => {
-        const itemCards = document.getElementById("itemCards");
-        const info = document.createElement("div");
-        const card = document.createElement("div");
-        card.classList.add(
-            "card",
-            "bg-white",
-            "rounded-2xl",
-            "p-4",
-            "lg:col-span-4",
-            "col-span-6",
-            "md:h-150",
-            "lg:h-130",
-            "h-115",
-            "flex",
-            "flex-col",
-            "shadow-md",
-            "hover:shadow-xl",
-            "transition",
-            "duration-300",
-            "border",
-            "border-gray-100"
-        );
+    const itemCards = document.getElementById("itemCards");
 
-        const name = document.createElement("h3");
-        name.classList.add("card__name");
-        name.textContent = item.name;
+    const renderItems = (items) => {
+        itemCards.innerHTML = "";
 
-        const price = document.createElement("p");
-        price.classList.add("card__price");
-        price.textContent = `Prix: ${item.price}$`;
+        items.forEach((item) => {
+            const info = document.createElement("div");
+            const card = document.createElement("div");
+            card.classList.add(
+                "card",
+                "bg-white",
+                "rounded-2xl",
+                "p-4",
+                "lg:col-span-4",
+                "col-span-6",
+                "md:h-150",
+                "lg:h-130",
+                "h-115",
+                "flex",
+                "flex-col",
+                "shadow-md",
+                "hover:shadow-xl",
+                "transition",
+                "duration-300",
+                "border",
+                "border-gray-100"
+            );
 
-        const id = document.createElement("p");
-        id.classList.add("card__id");
-        id.textContent = `item: ${item.id}`;
+            const name = document.createElement("h3");
+            name.classList.add("card__name");
+            name.textContent = item.name;
 
-        const img = document.createElement("img");
-        img.classList.add("card__img", "self-center", "my-auto");
-        img.setAttribute("src", item.imgsrc);
+            const price = document.createElement("p");
+            price.classList.add("card__price");
+            price.textContent = `Prix: ${item.price}$`;
 
-        const addBtn = document.createElement("button");
-        addBtn.classList.add(
-            "card__add",
-            "rounded-xl",
-            "flex",
-            "justify-center",
-            "items-center",
-            "px-4",
-            "py-2",
-            "mt-3",
-            "bg-blue-500",
-            "text-white",
-            "font-medium",
-            "shadow-md",
-            "transition",
-            "duration-400",
-            "hover:bg-blue-600",
-            "hover:shadow-lg",
-            "active:scale-95"
-        );
-        addBtn.textContent = "Ajouter au panier";
+            const id = document.createElement("p");
+            id.classList.add("card__id");
+            id.textContent = `item: ${item.id}`;
 
-        addBtn.addEventListener("click", () => {
-            console.log("click", item.id);
-            addToCart(item);
+            const img = document.createElement("img");
+            img.classList.add("card__img", "self-center", "my-auto");
+            img.setAttribute("src", item.imgsrc);
+
+            const addBtn = document.createElement("button");
+            addBtn.classList.add(
+                "card__add",
+                "rounded-xl",
+                "flex",
+                "justify-center",
+                "items-center",
+                "px-4",
+                "py-2",
+                "mt-3",
+                "bg-blue-500",
+                "text-white",
+                "font-medium",
+                "shadow-md",
+                "transition",
+                "duration-400",
+                "hover:bg-blue-600",
+                "hover:shadow-lg",
+                "active:scale-95"
+            );
+            addBtn.textContent = "Ajouter au panier";
+
+            addBtn.addEventListener("click", () => {
+                console.log("click", item.id);
+                addToCart(item);
+            });
+
+            info.classList.add(
+                "card__info",
+                "rounded-xl",
+                "bg-gray-50",
+                "p-3",
+                "mt-3",
+                "flex",
+                "flex-col",
+                "gap-1",
+                "text-white",
+                "shadow-inner"
+            );
+            itemCards.append(card);
+            info.append(name, price, id);
+            card.append(img, info, addBtn);
         });
+    };
 
-        info.classList.add(
-            "card__info",
-            "rounded-xl",
-            "bg-gray-50",
-            "p-3",
-            "mt-3",
-            "flex",
-            "flex-col",
-            "gap-1",
-            "text-white",
-            "shadow-inner"
-        );
-        itemCards.append(card);
-        info.append(name, price, id);
+    const sortByPriceAsc = () => {
+        const sorted = [...items].sort((a, b) => a.price - b.price);
+        renderItems(sorted);
+    };
+    const sortByPriceDesc = () => {
+        const sorted = [...items].sort((a, b) => b.price - a.price);
+        renderItems(sorted);
+    };
 
-        card.append(img, info, addBtn);
-    });
+    renderItems(items);
+
+    document.getElementById("sortByPriceAscBtn").addEventListener("click", sortByPriceAsc);
+    document.getElementById("sortByPriceDescBtn").addEventListener("click", sortByPriceDesc);
 });
+
 const cart = [];
 const addToCart = (item) => {
     console.log("add", item.name, "to cart");

@@ -14,7 +14,7 @@
             name="Votre panier d'achat"
             content="Vous pouvez consulter votre panier d'achat et poursuivre la commande ici!" />
     </head>
-    <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white grid grid-cols-12">
+    <body class="bg-gray-300 text-black grid grid-cols-12">
         <nav
             class="w-full sticky top-0 col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-blue-950 text-white">
             <h1 class="col-span-2 md:col-span-4 flex">
@@ -39,12 +39,12 @@
             </div>
 
             <div class="md:hidden col-span-2 col-end-13 flex justify-center items-center">
-                <i class="bx bx-menu bx-lg text-blue-600 dark:text-white" id="menuBtn"></i>
+                <i class="bx bx-menu bx-lg text-blue-600" id="menuBtn"></i>
             </div>
 
             <div
                 id="navMenu"
-                class="opacity-0 col-span-8 row-start-1 col-start-3 flex items-center justify-center text-black dark:text-white bg-blue-300 dark:bg-gray-800 inset-shadow-sm dark:inset-shadow-sm inset-shadow-blue-600/100 dark:inset-shadow-gray-900/100 rounded-md md:hidden h-70 m-2">
+                class="opacity-0 col-span-8 row-start-1 col-start-3 flex items-center justify-center text-black bg-blue-300 inset-shadow-sm inset-shadow-blue-600/100 rounded-md md:hidden h-70 m-2">
                 <ul class="text-center text-2xl">
                     <li class="my-4 hover:underline"><a href="index.html">Accueil</a></li>
                     <li class="my-4 font-bold hover:underline">
@@ -63,7 +63,7 @@
         <main class="row-start-2 col-span-12 grid grid-cols-12 p-3 gap-5">
             <h2 class="text-center text-3xl pt-10 col-span-12">Mon panier</h2>
             <section id="cartSection" class="gap-3 col-span-12 lg:col-span-8 mt-10">
-                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10">
+                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10 shadow-xl">
                     <div class="col-span-3 lg:col-span-1">
                         <img
                             src="img/articles/tom_cruise_PNG25.png"
@@ -84,7 +84,7 @@
                                     min="1"
                                     id="qtyFirst"
                                     value="1"
-                                    class="w-10 bg-blue-200 text-black rounded" />
+                                    class="w-10 bg-blue-400/50 text-black rounded" />
                             </form>
                         </div>
                         <div class="mr-3 lg:mr-10">
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10">
+                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10 shadow-xl">
                     <div class="col-span-3 lg:col-span-1">
                         <img
                             src="img/articles/whip_PNG24.png"
@@ -113,7 +113,7 @@
                                     min="1"
                                     id="qtySecond"
                                     value="1"
-                                    class="w-10 bg-blue-200 text-black rounded" />
+                                    class="w-10 bg-blue-400/50 text-black rounded" />
                             </form>
                         </div>
                         <div class="mr-3 lg:mr-10">
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10">
+                <div class="bg-blue-300 rounded-xl w-full p-4 grid grid-cols-12 mb-10 shadow-xl">
                     <div class="col-span-3 lg:col-span-1">
                         <img
                             src="img/articles/whisky_PNG141.png"
@@ -142,7 +142,7 @@
                                     min="1"
                                     id="qtyThird"
                                     value="1"
-                                    class="w-10 bg-blue-200 text-black rounded" />
+                                    class="w-10 bg-blue-400/50 text-black rounded" />
                             </form>
                         </div>
                         <div class="mr-3 lg:mr-10">
@@ -152,7 +152,7 @@
                 </div>
             </section>
             <aside
-                class="col-span-12 lg:col-span-4 mt-10 p-5 bg-blue-100 text-black flex flex-col justify-between rounded-xl">
+                class="col-span-12 lg:col-span-4 mt-10 p-5 bg-blue-100 text-black flex flex-col justify-between rounded-xl shadow-xl">
                 <h3 class="text-center text-3xl mb-10">Sommaire de la commande</h3>
                 <div class="my-3">
                     <p>Montant avant taxes: <span id="beforeTax" class="font-bold"></span>$</p>
@@ -194,10 +194,126 @@
                         <input
                             type="submit"
                             value="Soumettre la commande"
-                            class="p-3 text-xl bg-blue-500 rounded hover:bg-blue-600" />
+                            class="p-3 text-xl bg-blue-500 rounded hover:bg-blue-500/90 transition duration-100 active:scale-95 inset-shadow-sm inset-shadow-blue-600 active:inset-shadow-blue-800" />
                     </div>
                 </form>
             </aside>
+            <section class="col-span-12 mt-40">
+                <h2 class="text-center text-4xl font-bold">FAQ</h2>
+                <div class="max-w-screen-md mx-auto p-10">
+                    <div
+                        id="accordion-flush"
+                        data-accordion="collapse"
+                        data-active-classes="bg-blue-500 rounded text-gray-900 shadow-xl"
+                        data-inactive-classes="text-gray-500">
+                        <h3 id="accordion-flush-heading-1">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 px-4 font-medium text-left border-b border-blue-300 text-black"
+                                data-accordion-target="#accordion-flush-body-1"
+                                aria-expanded="true"
+                                aria-controls="accordion-flush-body-1">
+                                <span>Comment proceder au paiement?</span>
+                                <svg
+                                    data-accordion-icon=""
+                                    class="w-6 h-6 shrink-0 rotate-180"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h3>
+                        <div
+                            id="accordion-flush-body-1"
+                            class=""
+                            aria-labelledby="accordion-flush-heading-1">
+                            <div class="py-5 border-b border-blue-300">
+                                <p class="mb-2 text-gray-500">
+                                    Vous recevrez une confirmation de commande ainsi qu’un lien de
+                                    paiement. Vous disposez de 48 heures pour effectuer le paiement,
+                                    sans quoi la commande sera automatiquement annulée.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 id="accordion-flush-heading-2">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 px-4 font-medium text-left border-b border-blue-300 text-gray-500"
+                                data-accordion-target="#accordion-flush-body-2"
+                                aria-expanded="false"
+                                aria-controls="accordion-flush-body-2">
+                                <span>Est-ce que les articles sont remboursable?</span>
+                                <svg
+                                    data-accordion-icon=""
+                                    class="w-6 h-6 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h3>
+                        <div
+                            id="accordion-flush-body-2"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-2">
+                            <div class="py-5 border-b border-blue-300">
+                                <p class="mb-2 text-gray-500">
+                                    Sauf indication contraire précisée dans le courriel de
+                                    confirmation, tous les articles bénéficient d’une politique de
+                                    remboursement de 30 jours.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h3 id="accordion-flush-heading-4">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 px-4 font-medium text-left text-gray-500 border-b border-blue-300"
+                                data-accordion-target="#accordion-flush-body-4"
+                                aria-expanded="false"
+                                aria-controls="accordion-flush-body-4">
+                                <span>Quoi faire si j'ai un problème avec ma commande?</span>
+                                <svg
+                                    data-accordion-icon=""
+                                    class="w-6 h-6 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h3>
+                        <div
+                            id="accordion-flush-body-4"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-4">
+                            <div class="py-5 border-b border-blue-300">
+                                <p class="mb-2 text-gray-500">
+                                    Si j'amais vous avez un problème avec votre commande vous pouvez
+                                    nous contacter directement au
+                                    <a
+                                        href="mailto:info@synakode.com"
+                                        class="font-black text-blue-500/90"
+                                        >info@synakode.com</a
+                                    >
+                                    avec votre numéro de commande.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="text-white col-span-12 bg-blue-950 mt-30">
             <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">
@@ -216,6 +332,7 @@
                 </div>
             </div>
         </footer>
+        <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
         <script src="js/panier.js"></script>
         <script src="js/animation.js"></script>
     </body>
