@@ -6,7 +6,7 @@
         <title>Synakode - Accueil</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-        <link rel="manifest" href="manifest.json" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="stylesheet" href="style/css/style.css" />
         <link rel="stylesheet" href="style/tailwind.css" />
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -14,18 +14,18 @@
             name="Boutique de matériel aléatoire"
             content="Notre super boutique en ligne vous offres une mutlitude de produit complètement aléatoire!" />
         <script>
-            // if ("serviceWorker" in navigator) {
-            //     window.addEventListener("load", () => {
-            //         navigator.serviceWorker.register("service-worker.js").then((reg) => {
-            //             console.log("Service worker registered", reg);
-            //         });
-            //     });
-            // }
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker.register("service-worker.js").then((reg) => {
+                        console.log("Service worker registered", reg);
+                    });
+                });
+            }
         </script>
     </head>
-    <body class="bg-gray-300 dark:bg-gray-900 text-black dark:text-white grid grid-cols-12">
+    <body class="bg-gray-300 text-black grid grid-cols-12">
         <nav
-            class="w-full fixed col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-none bg-blue-950 text-white">
+            class="w-full sticky top-0 col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-blue-950 text-white">
             <h1 class="col-span-2 md:col-span-4 flex">
                 <a href="index.html" class="justify-center"
                     ><img
@@ -42,56 +42,73 @@
             <div class="hidden p-5 col-span-4 col-end-13 text-end items-center md:flex justify-end">
                 <a
                     href="connexion.html"
-                    class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                    class="transition duration-600 active:scale-95 bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                     >Se connecter</a
                 >
             </div>
 
             <div class="md:hidden col-span-2 col-end-13 flex justify-center items-center">
-                <i class="bx bx-menu bx-lg text-blue-600 dark:text-white" id="menuBtn"></i>
+                <i class="bx bx-menu bx-lg text-blue-600" id="menuBtn"></i>
             </div>
 
             <div
                 id="navMenu"
-                class="opacity-0 col-span-8 row-start-1 col-start-3 flex items-center justify-center text-black dark:text-white bg-blue-300 dark:bg-gray-800 inset-shadow-sm dark:inset-shadow-sm inset-shadow-blue-600/100 dark:inset-shadow-gray-900/100 rounded-md md:hidden h-70 m-2">
+                class="opacity-0 col-span-8 row-start-1 col-start-3 flex items-center justify-center text-black bg-blue-300 inset-shadow-sm inset-shadow-blue-600/100 rounded-md md:hidden h-70 m-2">
                 <ul class="text-center text-2xl">
                     <li class="my-4 font-bold hover:underline"><a href="index.html">Accueil</a></li>
                     <li class="my-4 hover:underline"><a href="panier.html">Mon panier</a></li>
-                    <li class="mt-10 hover:underline">
+                    <li class="mt-10">
                         <a
-                            class="bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
+                            class="transition duration-600 active:scale-95 bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500"
                             href="connexion.html"
                             >Se connecter</a
                         >
+                    </li>
+                    <li class="mt-5">
+                        <button
+                            aria-label="Install"
+                            id="btnInstall"
+                            class="hidden bg-blue-400 py-2 px-6 rounded inset-shadow-sm inset-shadow-blue-600/100 hover:inset-shadow-blue-800/100 active:inset-shadow-blue-800/100 hover:bg-blue-500 active:bg-blue-500">
+                            Installer l'application
+                        </button>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <main class="col-span-12 pt-30 grid grid-cols-12">
-            <h2 class="text-2xl col-span-12 text-center">
-                Boutique en ligne - Mode hors ligne(Fonctionnalités 'Ajouter au panier' et 'Se
-                connecter' sont désactivés)
+        <main class="col-span-12 p-3 grid grid-cols-12">
+            <h2 class="text-center text-red-500 text-3xl pt-10 col-span-12 mb-15 font-bold">
+                Mode hors ligne(Fonctionnalités 'Ajouter au panier' et 'Se connecter' sont
+                désactivés)
             </h2>
-            <aside class="col-span-3 p-2 flex flex-col">
-                <div class="text-center p-5">
-                    <ul>
-                        <li class="text-xl my-5">Trier par:</li>
-                        <li class="my-2">
-                            <button class="hover:underline hover:font-bold">
-                                Prix - Croissant
-                            </button>
-                        </li>
-                        <li class="my-2">
-                            <button class="hover:underline hover:font-bold">
-                                Prix - Décroissant
-                            </button>
-                        </li>
-                    </ul>
+            <h2 class="text-center text-3xl pt-10 col-span-12 mb-15 font-bold">
+                Boutique en ligne Synakode
+            </h2>
+            <section class="col-span-12 mb-20">
+                <p class="text-center text-2xl">
+                    Notre super boutique en ligne vous offres une mutlitude de produit complètement
+                    aléatoire!
+                </p>
+            </section>
+            <section class="border-2 border-b col-span-12 mb-15"></section>
+            <aside class="col-span-12 mb-10">
+                <h3 class="text-xl text-center font-black">Trier</h3>
+                <div class="flex flex-col w-40 m-auto text-white">
+                    <button
+                        id="sortByPriceAscBtn"
+                        class="my-2 bg-blue-500 p-1 rounded hover:bg-blue-500/90 transition duration-100 active:scale-95 inset-shadow-sm inset-shadow-blue-600 active:inset-shadow-blue-800">
+                        Prix - Croissant
+                    </button>
+                    <button
+                        id="sortByPriceDescBtn"
+                        class="my-2 bg-blue-500 p-1 rounded hover:bg-blue-500/90 transition duration-100 active:scale-95 inset-shadow-sm inset-shadow-blue-600 active:inset-shadow-blue-800">
+                        Prix - Décroissant
+                    </button>
                 </div>
             </aside>
-
-            <section id="itemCards" class="grid grid-cols-12 gap-3 col-span-9 p-3"></section>
+            <section
+                id="itemCards"
+                class="grid grid-cols-12 gap-3 col-span-10 col-start-2 p-3"></section>
         </main>
         <footer class="bg-blue-950 text-white mt-auto col-span-12 footer">
             <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">
@@ -110,6 +127,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/install.js"></script>
         <script src="js/animation.js"></script>
         <script src="js/accueil.js"></script>
     </body>

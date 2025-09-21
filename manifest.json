@@ -41,18 +41,11 @@
     "description": "Site web e-commerce de Synakode",
     "screenshots": [
         {
-            "src": "/img/maskable/wide.png",
+            "src": "/img/maskable/wide.jpg",
             "sizes": "1280x720",
             "type": "image/png",
             "form_factor": "wide",
             "label": "Page d’accueil"
-        },
-        {
-            "src": "/img/maskable/narrow.png",
-            "sizes": "540x720",
-            "type": "image/png",
-            "form_factor": "narrow",
-            "label": "Page produit"
         }
     ]
 }
