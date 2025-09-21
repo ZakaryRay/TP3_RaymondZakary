@@ -1,27 +1,27 @@
-const CACHE_NAME = "static-cache-v10";
+const CACHE_NAME = "static-cache-v11";
 
 const FILES_TO_CACHE = [
     "offline.html",
-    "animation.js",
-    "accueil.js",
-    "air_pump_PNG3.png",
-    "coffin_PNG35.png",
-    "ak47_PNG15466.png",
-    "audio_cassette_PNG16092.png",
-    "captain_america_PNG91.png",
-    "credit_card_PNG195.png",
-    "electric_scooter_PNG66.png",
-    "grill_PNG13962.png",
-    "leash_PNG134.png",
-    "mince_PNG50.png",
-    "number4_PNG15040.png",
-    "tom_cruise_PNG25.png",
-    "wheelchair_PNG82809.png",
-    "whip_PNG24.png",
-    "whisky_PNG141.png",
-    "LOGO_BLANC.svg",
-    "LOGO_COULEUR.svg",
-    "LOGO_NOIR.svg",
+    "js/animation.js",
+    "js/accueil.js",
+    "img/articles/air_pump_PNG3.png",
+    "img/articles/coffin_PNG35.png",
+    "img/articles/ak47_PNG15466.png",
+    "img/articles/audio_cassette_PNG16092.png",
+    "img/articles/captain_america_PNG91.png",
+    "img/articles/credit_card_PNG195.png",
+    "img/articles/electric_scooter_PNG66.png",
+    "img/articles/grill_PNG13962.png",
+    "img/articles/leash_PNG134.png",
+    "img/articles/mince_PNG50.png",
+    "img/articles/number4_PNG15040.png",
+    "img/articles/tom_cruise_PNG25.png",
+    "img/articles/wheelchair_PNG82809.png",
+    "img/articles/whip_PNG24.png",
+    "img/articles/whisky_PNG141.png",
+    "img/LOGO_BLANC.svg",
+    "img/LOGO_COULEUR.svg",
+    "img/LOGO_NOIR.svg",
 ];
 
 self.addEventListener("install", (evt) => {
@@ -67,7 +67,7 @@ self.addEventListener("fetch", (evt) => {
     evt.respondWith(
         fetch(evt.request).catch(async () => {
             return caches.open(CACHE_NAME).then((cache) => {
-                return cache.match("/offline.html");
+                return cache.match("offline.html");
             });
         })
     );
