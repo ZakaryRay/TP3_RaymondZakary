@@ -1,9 +1,10 @@
-const CACHE_NAME = "static-cache-v11";
+const CACHE_NAME = "static-cache-v12";
 
 const FILES_TO_CACHE = [
     "offline.html",
     "js/animation.js",
     "js/accueil.js",
+    "manifest.json",
     "img/articles/air_pump_PNG3.png",
     "img/articles/coffin_PNG35.png",
     "img/articles/ak47_PNG15466.png",
