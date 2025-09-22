@@ -3,6 +3,16 @@ const signInBtn = document.getElementById("signInBtn");
 const signIn = document.getElementById("signIn");
 const signUp = document.getElementById("signUp");
 
+window.addEventListener("DOMContentLoaded", () => {
+    gsap.from(signIn, {
+        y: 200,
+        duration: 1,
+        opacity: 0,
+        ease: "power2.out",
+        zIndex: 1,
+    });
+});
+
 signUpBtn.addEventListener("click", () => {
     signIn.classList.add("hidden");
     signUp.classList.remove("hidden");
@@ -97,12 +107,10 @@ const validateSignUp = () => {
         isValide = false;
         erreurs[4].textContent = "Les mots de passes ne correspondent pas.";
     } else {
-        if ((erreurs.length = 0)) {
-            erreurs[4].textContent = "";
-        }
+        erreurs[4].textContent = "";
     }
 
-    if (userName.value.trim() < 1) {
+    if (userName.value.trim().length < 1) {
         isValide = false;
         erreurs[5].textContent = "Le nom d'utilisateur est obligatoire.";
     } else if (userName.value.trim().length < 8) {

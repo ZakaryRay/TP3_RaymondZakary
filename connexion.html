@@ -8,7 +8,6 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
         <link rel="stylesheet" href="style/css/style.css" />
         <link rel="stylesheet" href="style/tailwind.css" />
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
         <meta
             name="Boutique de matériel aléatoire"
@@ -17,7 +16,7 @@
 
     <body class="bg-gray-300 text-black grid grid-cols-12">
         <nav
-            class="w-full fixed col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-none bg-blue-950 text-white">
+            class="w-full sticky top-0 col-span-12 grid auto-rows-[100px] grid-cols-12 text-xl bg-none bg-blue-950 text-white">
             <h1 class="col-span-2 md:col-span-4">
                 <a href="index.html" class="inline-block"
                     ><img
@@ -66,7 +65,8 @@
                     <img
                         src="img/LOGO_COULEUR.svg"
                         alt="Logo Synakode"
-                        class="mx-auto h-10 w-auto" />
+                        class="mx-auto h-10 w-auto"
+                        id="logoForm" />
                     <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-blue-400">
                         Se connecter à Synakode
                     </h2>
@@ -260,6 +260,18 @@
                 </div>
             </div>
         </section>
+        <section class="col-span-12 m-auto text-center mb-20">
+            <h3 class="w-[70%] m-auto text-xl">
+                Pour tout problème lié avec un compte veuillez nous contacter à l'adresse courriel
+                suivante
+            </h3>
+            <a
+                href="mailto:info@synakode.com"
+                title="Envoyer un email à info@synakode.com"
+                class="inline-block font-bold text-blue-500 hover:text-blue-500/85 text-xl hover:underline transition duration-150 hover:scale-105 my-3">
+                info@synakode.com
+            </a>
+        </section>
 
         <footer class="bg-blue-950 text-white mt-auto col-span-12 footer">
             <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-12">
@@ -278,7 +290,8 @@
                 </div>
             </div>
         </footer>
-        <script src="js/connexion.js"></script>
+
         <script src="js/animation.js"></script>
+        <script src="js/connexion.js"></script>
     </body>
 </html>

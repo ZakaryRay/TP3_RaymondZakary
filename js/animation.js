@@ -18,6 +18,9 @@ window.addEventListener("load", () => {
         }
     );
 });
+
+
+
 let isOpen = false;
 
 const menuBtn = document.getElementById("menuBtn");
